@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int Health;
-    public float speed;
+    public int Health; 
+    public float speed; 
     public float jumpForce;
     public GameObject EndPanel;
     public GameObject GameOverText;
