@@ -378,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4959564395786146921}
   - component: {fileID: 3337171574067783705}
+  - component: {fileID: 7569347328930915745}
   m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
@@ -454,6 +455,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7569347328930915745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2716607692265692408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b2d85c2d9891440b04c37c6544da38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunType: 1
+  offset: 180
+  bullet: {fileID: 5710899955353507271, guid: c80702596014f0744ae2c88eaab532f9, type: 3}
+  shotPoint: {fileID: 514314147030050345}
+  StartTimeBtwShots: 1
+  facingRight: 1
 --- !u!1 &3122922193355003844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,16 +1163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304d1c6c4132f1f439600c819448d1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0
   health: 5
   speed: 3
   direction: {x: -1, y: 0}
   effect: {fileID: 6220992122993291852, guid: fe4fc9083a02d9a42a3278d7ff902047, type: 3}
   effectOffset: 0.5
   damage: 0
-  bulletPrefab: {fileID: 5710899955353507271, guid: 71b289ac30785ec4a8cbb29dd18b0984, type: 3}
-  firePoint: {fileID: 514314147030050345}
-  bulletForce: 10
-  bulletSpreadAngle: 15
 --- !u!95 &1280784482670840447
 Animator:
   serializedVersion: 5

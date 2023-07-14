@@ -85,7 +85,11 @@ public class Player : MonoBehaviour
         Time.timeScale = 0;
         isGameOver = true;
     }
-
+    
+    public void ChangeHealth(int healthValue)
+    {
+        Health += healthValue;
+    }
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
