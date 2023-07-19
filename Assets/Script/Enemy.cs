@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public Vector2 direction = Vector2.right;
     public GameObject effect;
     public float effectOffset = 0.5f;
-    public float damage;
+    public int damage;
     private Player player;
 
     private ScoreManager scoreManager;
@@ -25,9 +25,10 @@ public class Enemy : MonoBehaviour
         if (health <= 0)  
         {
             Die();
-        } 
+        }
+        
 
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
     private void Die()
@@ -43,5 +44,11 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         Instantiate(effect, hitPosition + new Vector3(effectOffset, 0, 0), Quaternion.identity);
+    }
+
+    public void onEnemyAttack()
+    {
+        player.ChangeHealth(-damage);
+        timeBtwAttack = startTimeBtwAttack;
     }
 }

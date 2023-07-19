@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int Health; 
+    public int health; 
     public float speed; 
     public float jumpForce;
     public GameObject EndPanel;
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Health <= 0 && !isDead)
+        if (health <= 0 && !isDead)
         {
             Die();
         }
@@ -64,11 +64,11 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Health--;
+            health--;
         }
     }
 
-    void Flip()
+    public void Flip()
     {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
     
     public void ChangeHealth(int healthValue)
     {
-        Health += healthValue;
+        health += healthValue;
     }
     private void Restart()
     {

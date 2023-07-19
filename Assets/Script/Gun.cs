@@ -12,7 +12,9 @@ public class Gun : MonoBehaviour
     private float timeBtwShots;
     public float StartTimeBtwShots;
     public bool facingRight = Player.facingRight;
-    private Animator camAnim;    
+    private Animator camAnim;
+    private float rotZ;
+    private Vector3 difference;
     private Player player;
 
 
@@ -25,20 +27,20 @@ public class Gun : MonoBehaviour
     {
         if(gunType == GunType.Default)
         {
-            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset); 
         }
         else if (gunType == GunType.Enemy)
         {
-            Vector3 difference = player.transform.position - transform.position;
-            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            difference = player.transform.position - transform.position;
+            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         }
 
 
         if(timeBtwShots <= 0)
         {
-            if(Input.GetMouseButton(0) || gunType == GunType.Enemy)
+            if(Input.GetMouseButton(0))
             {
                 Shoot();
             }     

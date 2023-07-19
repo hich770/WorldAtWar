@@ -18,26 +18,26 @@ public class Bullet : MonoBehaviour
     }
 
 private void Update()
-{
-    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
-
-    if(hitInfo.collider != null)
     {
-        if(hitInfo.collider.CompareTag("Enemy"))
-            {
-                hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage, hitInfo.point);
-            }
-            else if(hitInfo.collider.CompareTag("Obstruction"))
-            {
-            hitInfo.collider.GetComponent<Obstruction>().TakeDamage(damage, hitInfo.point);
-            }
-            if(hitInfo.collider.CompareTag("Player"))
-            {
-                hitInfo.collider.GetComponent<Player>().ChangeHealth(-damage);
-            }
-        Destroy(gameObject);
-    }
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, direction, distance, whatIsSolid);
 
-    transform.Translate(direction * speed * Time.deltaTime);
-}
+        if(hitInfo.collider != null)
+        {
+            if(hitInfo.collider.CompareTag("Enemy"))
+                {
+                    hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage, hitInfo.point);
+                }
+                else if(hitInfo.collider.CompareTag("Obstruction"))
+                {
+                hitInfo.collider.GetComponent<Obstruction>().TakeDamage(damage, hitInfo.point);
+                }
+                if(hitInfo.collider.CompareTag("Player"))
+                {
+                    hitInfo.collider.GetComponent<Player>().ChangeHealth(-damage);
+                }
+                Destroy(gameObject);
+        }
+
+        transform.Translate(direction * speed * Time.deltaTime);
+    }
 }

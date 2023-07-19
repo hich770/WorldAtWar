@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3317695647439899713}
   - component: {fileID: 7215392036395970932}
-  - component: {fileID: 6282258965405892074}
   - component: {fileID: -3583227474637458527}
+  - component: {fileID: 3028172216734544189}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5710899955353507271}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.99993044, w: -0.011794566}
   m_LocalPosition: {x: 6.209, y: -2.693, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 181.352}
 --- !u!212 &7215392036395970932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86,26 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6282258965405892074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5710899955353507271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1b9446e2b30884baa9d8b759e3db1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20.1
-  lifetime: 0.5
-  distance: 0.5
-  damage: 1
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 256
-  enemyBullet: 1
 --- !u!114 &-3583227474637458527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +99,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1.48
+--- !u!114 &3028172216734544189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710899955353507271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957f9c252957e1e42a5a88351e61a021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20.1
+  lifetime: 3.41
+  distance: 0
+  damage: 1
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 320
+  destroyEffect: {fileID: 6220992122993291852, guid: fefc4d5f882c3834c9270998c29a461f, type: 3}
