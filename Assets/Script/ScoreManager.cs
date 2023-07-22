@@ -3,18 +3,14 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score;
+    public static int score;
     public Text scoreDisplay;
     public Text objectToSpawnDisplay;
     public Text EndScore;
     public GameObject objectToSpawn;
     public GameObject dugout;
 
-
-    private void Start()
-    {
-        
-    }
+    
     private void Update()
     {
         scoreDisplay.text = score.ToString();

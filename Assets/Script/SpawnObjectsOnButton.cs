@@ -31,12 +31,12 @@ void Update()
         }
 
         // Если объект можно спавнить, то спавним его
-        if (canSpawn && scoreManager.score >= 10)
+        if (canSpawn && ScoreManager.score >= 10)
         {
             Instantiate(scoreManager.dugout, worldPosition, Quaternion.identity);
             scoreManager.AddScore(-10);
         }
-        else if (canSpawn && scoreManager.score > 0)
+        else if (canSpawn && ScoreManager.score > 0)
         {
             Instantiate(scoreManager.objectToSpawn, worldPosition, Quaternion.identity);
             scoreManager.AddScore(-1);
