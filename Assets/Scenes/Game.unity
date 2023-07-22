@@ -1573,7 +1573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4673470238395921740, guid: de017c9c79721f44ebfa3fb37d850b2e, type: 3}
       propertyPath: health
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4673470238395921740, guid: de017c9c79721f44ebfa3fb37d850b2e, type: 3}
       propertyPath: EndPanel
@@ -2089,6 +2089,7 @@ MonoBehaviour:
   jumpForce: 0
   EndPanel: {fileID: 0}
   GameOverText: {fileID: 0}
+  effect: {fileID: 0}
   RestartButton: {fileID: 0}
 --- !u!1 &1342785608
 GameObject:
@@ -3733,7 +3734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000007391, y: -76.235}
+  m_AnchoredPosition: {x: -0.000007391, y: -77}
   m_SizeDelta: {x: 164.101, y: 152.46997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955956417

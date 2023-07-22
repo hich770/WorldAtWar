@@ -22,6 +22,7 @@ public class Gun : MonoBehaviour
     {
         camAnim = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        facingRight = true;
     }
     void Update()
     {

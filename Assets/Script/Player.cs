@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     public float jumpForce;
     public GameObject EndPanel;
     public GameObject GameOverText;
+    public GameObject effect;
     public Button RestartButton;
     private float moveInput;
     private bool isDead = false;
     private bool isGameOver = false;
+    
 
     private Rigidbody2D rb;
     public static bool facingRight = true;

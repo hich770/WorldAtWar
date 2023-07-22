@@ -9,7 +9,8 @@ public class EnemyBullet : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid;
     
-    public GameObject destroyEffect;
+    
+    
 
     private void Start()
     {
@@ -25,6 +26,10 @@ public class EnemyBullet : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<Player>().ChangeHealth(-damage);
             }
+            else if(hitInfo.collider.CompareTag("Obstruction"))
+            {
+                hitInfo.collider.GetComponent<Obstruction>().TakeDamage(damage, hitInfo.point);
+            }
             DestroyBullet();
         }
         
@@ -33,7 +38,6 @@ public class EnemyBullet : MonoBehaviour
 
     public void DestroyBullet()
     {
-        Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
