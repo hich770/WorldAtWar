@@ -5,6 +5,8 @@ public class Setting : MonoBehaviour
 {
     public GameObject SettingPanel;
     public GameObject infoPanel; 
+    public GameObject HighScorePanel; 
+    public GameObject WorldAtWarPanel;
     public KeyCode openKey;
 
     private bool isOpen = false;
@@ -43,6 +45,16 @@ public class Setting : MonoBehaviour
     public void CloseInfoPanel()
     {
         infoPanel.SetActive(false);
+    }
+    public void OpenHighScore()
+    {
+        HighScorePanel.SetActive(true);
+        WorldAtWarPanel.SetActive(false);
+    }
+    public void CloseHighScore()
+    {
+        HighScorePanel.SetActive(false);
+        WorldAtWarPanel.SetActive(true);
     }
     
 }

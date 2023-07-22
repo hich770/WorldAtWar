@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private bool isDead = false;
     private bool isGameOver = false;
     
+    
 
     private Rigidbody2D rb;
     public static bool facingRight = true;
@@ -86,6 +87,8 @@ public class Player : MonoBehaviour
         GameOverText.SetActive(true);
         Time.timeScale = 0;
         isGameOver = true;
+        ShowAd();
+
     }
     
     public void ChangeHealth(int healthValue)
@@ -96,5 +99,9 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+    }
+    public void ShowAd()
+    {
+        Application.ExternalCall("ShowAd");
     }
 }
