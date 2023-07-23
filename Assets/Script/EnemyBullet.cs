@@ -8,6 +8,7 @@ public class EnemyBullet : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
+    public GameObject hitEffect;
     
     
     

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private float moveInput;
     private bool isDead = false;
     private bool isGameOver = false;
+    public float effectOffset;
     
     
 

@@ -1114,6 +1114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SettingPanel: {fileID: 1260544886}
   infoPanel: {fileID: 0}
+  HighScorePanel: {fileID: 0}
+  WorldAtWarPanel: {fileID: 0}
   openKey: 27
 --- !u!1 &539852442
 GameObject:
@@ -1571,6 +1573,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4673470238395921740, guid: de017c9c79721f44ebfa3fb37d850b2e, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 6220992122993291852, guid: fe4fc9083a02d9a42a3278d7ff902047, type: 3}
     - target: {fileID: 4673470238395921740, guid: de017c9c79721f44ebfa3fb37d850b2e, type: 3}
       propertyPath: health
       value: 15
@@ -2091,6 +2097,7 @@ MonoBehaviour:
   GameOverText: {fileID: 0}
   effect: {fileID: 0}
   RestartButton: {fileID: 0}
+  effectOffset: 0
 --- !u!1 &1342785608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a1320142ef07c498398606773bcb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 1
   scoreDisplay: {fileID: 1342785611}
   objectToSpawnDisplay: {fileID: 539852444}
   EndScore: {fileID: 1955854760}
@@ -2919,8 +2925,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.70909786, y: -3.2674217}
-      - {x: -0.8692781, y: -3.1637833}
+    - - {x: -0.5494597, y: -3.2743623}
+      - {x: -0.7512847, y: -3.13602}
       - {x: -2.210131, y: -2.2939363}
       - {x: -15.248461, y: -2.236696}
       - {x: -9.599999, y: -5.4}
@@ -3734,8 +3740,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000007391, y: -77}
-  m_SizeDelta: {x: 164.101, y: 152.46997}
+  m_AnchoredPosition: {x: -0.000007391, y: -73.478}
+  m_SizeDelta: {x: 164.101, y: 146.641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955956417
 MonoBehaviour:

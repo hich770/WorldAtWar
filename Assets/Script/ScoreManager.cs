@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,12 @@ public class ScoreManager : MonoBehaviour
     public GameObject objectToSpawn;
     public GameObject dugout;
 
-    
+
+    private void Start()
+    {
+        score = 0;
+    }
+
     private void Update()
     {
         scoreDisplay.text = score.ToString();
