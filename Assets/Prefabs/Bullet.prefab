@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5710899955353507271}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.209, y: -2.693, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7215392036395970932
 SpriteRenderer:
@@ -105,7 +105,7 @@ MonoBehaviour:
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
-  effect: {fileID: 6220992122993291852, guid: fe4fc9083a02d9a42a3278d7ff902047, type: 3}
+  enemyBullet: 0
 --- !u!114 &-3583227474637458527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5244e74f7ad754ebb5fe54c865da85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1.48
+  time: 1.72

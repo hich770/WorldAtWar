@@ -39,16 +39,21 @@ public class Gun : MonoBehaviour
         }
 
 
-        if(timeBtwShots <= 0)
+        if(gunType == GunType.Enemy && timeBtwShots <= 0)
         {
-            if(Input.GetMouseButton(0))
-            {
-                Shoot();
-            }     
+            Shoot();
+            timeBtwShots = StartTimeBtwShots;
         } 
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+        if (gunType == GunType.Default && timeBtwShots <= 0)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                Shoot();
+            }
         }
     }
     private void FixedUpdate()

@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     private Vector2 direction;
 
     [SerializeField] bool enemyBullet;
-    private void Start()
+    private void Start() 
     {
         direction = Player.facingRight ? Vector2.right : Vector2.left;
         transform.localScale = Player.facingRight ? Vector3.one : new Vector3(-1, 1, 1);

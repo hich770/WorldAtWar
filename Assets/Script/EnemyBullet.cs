@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -9,6 +8,7 @@ public class EnemyBullet : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid;
     public GameObject hitEffect;
+    public GameObject obstructionHitEffect ;
     
     
     
@@ -25,14 +25,17 @@ public class EnemyBullet : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Player"))
             {
+                Instantiate(hitEffect, hitInfo.point, Quaternion.identity);
                 hitInfo.collider.GetComponent<Player>().ChangeHealth(-damage);
             }
-            else if(hitInfo.collider.CompareTag("Obstruction"))
+            else if (hitInfo.collider.CompareTag("Obstruction"))
             {
+                Instantiate(obstructionHitEffect, hitInfo.point, Quaternion.identity);
                 hitInfo.collider.GetComponent<Obstruction>().TakeDamage(damage, hitInfo.point);
             }
             DestroyBullet();
         }
+
         
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }

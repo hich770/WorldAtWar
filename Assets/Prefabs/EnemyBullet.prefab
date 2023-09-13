@@ -118,4 +118,5 @@ MonoBehaviour:
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 320
-  destroyEffect: {fileID: 6220992122993291852, guid: fe4fc9083a02d9a42a3278d7ff902047, type: 3}
+  hitEffect: {fileID: 6220992122993291852, guid: fe4fc9083a02d9a42a3278d7ff902047, type: 3}
+  obstructionHitEffect: {fileID: 6220992122993291852, guid: fefc4d5f882c3834c9270998c29a461f, type: 3}

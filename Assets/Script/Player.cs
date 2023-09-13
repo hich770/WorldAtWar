@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public int health; 
-    public float speed; 
-    public float jumpForce;
+    public float speed;
     public GameObject EndPanel;
     public GameObject GameOverText;
     public GameObject effect;
@@ -95,6 +94,7 @@ public class Player : MonoBehaviour
     public void ChangeHealth(int healthValue)
     {
         health += healthValue;
+        
     }
     private void Restart()
     {
